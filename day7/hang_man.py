@@ -2,7 +2,6 @@ import random
 from word_list import word_list
 
 random_choice = random.choice(word_list)
-print(random_choice)
 print("Welcome to the Hang Man game")
 print("choose a letter")
 
