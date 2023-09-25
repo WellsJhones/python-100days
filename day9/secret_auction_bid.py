@@ -18,7 +18,6 @@ winner = {
     "name": "hiii",
     "bid": 0
 }
-print(winner['bid'])
 while ask == True:
     name = input("what's your name? \n")
     bid = int(input("What's the bid price: \n"))
