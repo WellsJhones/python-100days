@@ -55,7 +55,7 @@ operations = {
     "/": div,
 }
 
-num1 = int(input("What's the first number?: "))
+num1 = float(input("What's the first number?: "))
 
 simbols = []
 
@@ -71,7 +71,7 @@ operation_simb = input("pick an operation from the line above: ")
 if operation_simb not in simbols:
     print("invalid")
 else:
-    num2 = int(input("what's the second number?: "))
+    num2 = float(input("what's the second number?: "))
 
     def get_result(nu1, nu2):
         for simbol in operations:
