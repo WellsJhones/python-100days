@@ -88,4 +88,4 @@ while add_more:
         result_final = new_result
     elif ask == 'no':
         add_more = False
-        print("the result is: {result_final}")
+        print(f"the result is: {result_final}")
