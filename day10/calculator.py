@@ -56,13 +56,36 @@ operations = {
 }
 
 num1 = int(input("What's the first number?: "))
-for operation in operations:
-    print(operation)
+
+
+def show_operation():
+    for operation in operations:
+        print(operation)
+
+
+show_operation()
 operation_simb = input("pick an operation from the line above: ")
 num2 = int(input("what's the second number?: "))
-for simbol in operations:
-    if operation_simb == simbol:
-        answe = operations[simbol](num1, num2)
 
 
-print(f"{num1} {operation_simb} {num2} = {answe}")
+def get_result(nu1, nu2):
+    for simbol in operations:
+        if operation_simb == simbol:
+            answe = operations[simbol](nu1, nu2)
+            return answe
+
+
+first_result = get_result(num1, num2)
+result_final = first_result
+add_more = True
+while add_more:
+    ask = input("Do you want to do more calculations? 'yes' or 'no': ").lower()
+    if ask == "yes":
+        show_operation()
+        operation_simb = input("pick an operation from the line above: ")
+        num3 = int(input("type the number: "))
+        new_result = (get_result(first_result, num3))
+        result_final = new_result
+    elif ask == 'no':
+        add_more = False
+        print("the result is: {result_final}")
